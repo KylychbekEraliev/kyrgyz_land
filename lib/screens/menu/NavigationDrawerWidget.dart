@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:log_inapp/pagescreens/Chyngyz.dart';
+import 'package:log_inapp/pagescreens/hitory.dart';
 import 'package:log_inapp/pagescreens/music.dart';
 import 'package:log_inapp/pagescreens/sport.dart';
 
@@ -15,23 +16,23 @@ class NavigationDrawerWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text('Bakyt.com'),
-            accountEmail: Text('Bakyt@gmail.com'),
+            accountName: Text('Beknazar'),
+            accountEmail: Text('Beknazar@gmail.com'),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
-                child: Image.asset('assets/images/actor.png',
+                child: Image.asset('assets/images/gerb.png',
                     width: 90, height: 90, fit: BoxFit.cover),
               ),
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/12345.jpg'),
                   fit: BoxFit.cover),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
-            title: Text('Chyngyz Aitmatov'),
+            leading: const Icon(Icons.read_more),
+            title: const Text('Chyngyz Aitmatov'),
             onTap: () {
               Navigator.push(
                   context,
@@ -41,24 +42,30 @@ class NavigationDrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
-            title: Text('Kyrgyz sport games'),
+            leading: const Icon(Icons.sports_basketball),
+            title: const Text('Kyrgyz sport games'),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Sport(),
+                    builder: (context) => const Sport(),
                   ));
             },
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
-            title: Text('Kyrgyz historical places'),
-            onTap: () {},
+            leading: const Icon(Icons.history),
+            title: const Text('Kyrgyz historical places'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const History(),
+                  ));
+            },
           ),
           ListTile(
-            leading: Icon(Icons.share),
-            title: Text('kyrgyz musical instruments'),
+            leading: const Icon(Icons.music_note),
+            title: const Text('kyrgyz musical instruments'),
             onTap: () {
               Navigator.push(
                   context,
@@ -68,13 +75,13 @@ class NavigationDrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.request_page),
-            title: Text('Request'),
+            leading: const Icon(Icons.request_page),
+            title: const Text('Request'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
-            title: Text('Favorites'),
+            leading: const Icon(Icons.favorite),
+            title: const Text('Favorites'),
             onTap: () {},
           ),
         ],
