@@ -1,9 +1,7 @@
-// ignore_for_file: avoid_print
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:log_inapp/reUsable_widgets/reusable_widget.dart';
-import 'package:log_inapp/screens/home_screen.dart';
 import 'package:log_inapp/screens/info_page.dart';
 import 'package:log_inapp/screens/sign_up.dart';
 import 'package:log_inapp/screens/utils/colors_list.dart';
@@ -53,14 +51,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 reusableTextField("Enter Email ID", Icons.person_outline, false,
                     _emailTextController),
-                // ignore: prefer_const_constructors
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 reusableTextField("Enter Password", Icons.lock_outline, true,
                     passwordTextController),
-                // ignore: prefer_const_constructors
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 signInSignUpButton(context, true, () {
@@ -72,8 +68,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          // ignore: prefer_const_constructors
-                          builder: (context) => InfoPage(),
+                          builder: (context) => const InfoPage(),
                         ));
                   }).onError((error, stackTrace) {
                     print("Error${error.toString()}");
